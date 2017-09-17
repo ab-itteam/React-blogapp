@@ -1,11 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { createStore } from 'redux';
+import { createStore } from 'redux'
 import { reducer } from './Reducer';
 import { Provider } from 'react-redux';
+import { ConnectedRouter } from 'react-router-redux'
+import createHistory from 'history/createBrowserHistory'
 
 
-import Blog from './components/Blog.jsx'
+
+import Main from './components/Main.jsx'
 
 const initialState = {
     posts: [
@@ -13,11 +16,14 @@ const initialState = {
     ],
     newPost: { title: "",text: "" }
 };
+const history = createHistory();
 
-const store = createStore(reducer,initialState);
+const store = createStore(reducer, initialState);
 
 ReactDOM.render(
     <Provider store={store}>
-        <Blog />
+        <ConnectedRouter history={history}>
+        <Main />
+        </ConnectedRouter>
     </Provider>
         , document.getElementById('root'));

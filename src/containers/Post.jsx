@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import {Link} from "react-router-dom";
 
 export class AllPosts extends React.Component {
     render() {
@@ -13,7 +14,7 @@ export class AllPosts extends React.Component {
         console.log(postData);
         return (
             <li>
-                {postData.title}
+                <Link to={'/post/' +postData.title}>   {postData.title}</Link>
             </li>);
     }
 }
