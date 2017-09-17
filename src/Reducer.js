@@ -11,14 +11,20 @@ export function reducer(state, action) {
             });
         case PostActions.newPostTextChanged:
             return Object.assign({}, state, {
-                newPost: { text: action.text }
+                newPost: {
+                    ...state.newPost,
+                    text: action.text
+                }
             });
-
-            case PostActions.newPostTitleChanged:
+        case PostActions.newPostTitleChanged:
             return Object.assign({}, state, {
-                newPost: { title: action.title }
+                newPost: {
+                    ...state.newPost,
+                    title: action.title
+                }
             });
-        default :  return state;
+        default :
+            return state;
 
     }
 }

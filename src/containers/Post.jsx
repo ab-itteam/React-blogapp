@@ -10,8 +10,9 @@ export class AllPosts extends React.Component {
         );
     }
     renderPost(postData) {
+        console.log(postData);
         return (
-            <li key={postData.title}>
+            <li>
                 {postData.title}
             </li>);
     }

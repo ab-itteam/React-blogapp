@@ -28,7 +28,7 @@ export const actionCreators = {
         return {type: PostActions.newPostTextChanged, text: event.target.value}
     },
     inputTitleChanged: (event) => {
-        return {type: PostActions.newPostTitleChanged, text: event.target.value}
+        return {type: PostActions.newPostTitleChanged, title: event.target.value}
     },
     newPostSubmitted: (title, text) => {
         return {type: PostActions.newPostCreated, title: title, text: text}
