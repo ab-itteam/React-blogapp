@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {AllPostsContainer} from './Post';
+import {AllPostsContainer} from '../containers/Post';
 
 class Blog extends Component {
     render() {
