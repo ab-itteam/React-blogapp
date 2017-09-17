@@ -10,7 +10,8 @@ import Blog from './components/Blog.jsx'
 const initialState = {
     posts: [
         {  title : 'My first blogpost', text: "Hello this is the first blogpost", }
-    ]
+    ],
+    newPost: { title: "",text: "" }
 };
 
 const store = createStore(reducer,initialState);

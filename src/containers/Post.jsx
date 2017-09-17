@@ -12,7 +12,7 @@ export class AllPosts extends React.Component {
     renderPost(postData) {
         return (
             <li key={postData.title}>
-                {postData.text}
+                {postData.title}
             </li>);
     }
 }

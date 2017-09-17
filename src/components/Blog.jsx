@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {AllPostsContainer} from '../containers/Post';
+import {NewPostContainer} from '../containers/NewPost';
 
 class Blog extends Component {
     render() {
@@ -7,7 +8,7 @@ class Blog extends Component {
             <div>
                 <h1>My Personal Blog</h1>
                 <AllPostsContainer/>
-
+                <NewPostContainer/>
             </div>
 
         );
